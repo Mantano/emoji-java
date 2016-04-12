@@ -326,7 +326,7 @@ public class EmojiParser {
                 String emojiString = input.substring(i, emojiEnd);
                 String fitzpatrickString = (emojiEnd+2 <= input.length()) ? input.substring(emojiEnd, emojiEnd+2) : null;
                 candidates.add(new UnicodeCandidate(emojiString, fitzpatrickString, i, emojiEnd));
-                i = emojiEnd;
+                i = emojiEnd - 1;
             }
         }
         return candidates;
